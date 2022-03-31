@@ -1,1 +1,32 @@
+globals
+[
+  porange
+  pblue
+  rr
+]
 
+breed [bac1s bac1]
+breed [bac2s bac2]
+patches-own [n1 n2]
+turtles-own [nutrientneed]
+
+to setup
+  clear-all
+
+  set-default-shape bac1s "circle"
+  set-default-shape bac2s "circle"
+
+  ask patches [
+    set n1 200
+    set n2 200
+  ]
+
+  create-bac1s 1 [
+    setxy 0 0
+    set color red
+  ]
+  create-bac2s 1 [
+    setxy 32 32
+    set color blue
+  ]
+end
